@@ -20,9 +20,17 @@ export default function NavLinks() {
 
   useEffect(() => {
     const userId = localStorage.getItem('token'); // Ambil id user yang login
-
+    
     if (!userId) return;
-    fetch(`https://1202-2001-448a-3010-35d1-fe2e-a683-14c-5314.ngrok-free.app/api/sales/${userId}`) // Sesuaikan endpoint
+    fetch(`https://1202-2001-448a-3010-35d1-fe2e-a683-14c-5314.ngrok-free.app/api/sales/${userId}`, {
+      headers: { 
+        'Content-Type': 'application/json',
+        'ngrok-skip-browser-warning': "69420"
+        
+      },
+      method: 'GET'
+    },
+    ) 
       .then((res) => res.json())
       .then((data) => {
         setContacts(data); // Simpan hasil ke state

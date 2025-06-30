@@ -61,7 +61,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const register = async (name: string, email: string, password: string, phone_number: string, role: string) => {
     const res = await fetch('https://1202-2001-448a-3010-35d1-fe2e-a683-14c-5314.ngrok-free.app/api/auth/register', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 
+        'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password, phone_number, role }),
     });
     const data = await res.json();
