@@ -60,7 +60,6 @@ export default function ChatPage() {
         <ModalTriggerClient source="page">Summarize</ModalTriggerClient>
       </div>
 
-      {/* Chat Messages */}
       <div className="overflow-y-scroll h-full flex flex-col gap-y-5 max-md:gap-y-5 p-2">
         {message.map((msg) => (
           
