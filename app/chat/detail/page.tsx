@@ -10,7 +10,7 @@ interface Message {
   created_at: string;
 }
 
-export default function page() {
+export default function Page() {
 
   const searchParams = useSearchParams();
   const salesId = searchParams.get('sales_id');

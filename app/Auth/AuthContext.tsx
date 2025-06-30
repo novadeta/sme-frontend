@@ -58,8 +58,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   // Fungsi register: kirim data, lalu otomatis login jika sukses
-  const register = async (name: string, email: string, password: string, phone_number: string, role: String) => {
-    const res = await fetch('http://127.0.0.1:3000/api/auth/register', {
+  const register = async (name: string, email: string, password: string, phone_number: string, role: string) => {
+    const res = await fetch('https://3da8-2001-448a-3010-4eb2-71fe-9158-fa59-2da9.ngrok-free.app/api/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password, phone_number, role }),

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Head from "next/head";
 import Image from "next/image";
 import Link from 'next/link';
-export default function page() {
+export default function Page() {
     const [qr, setQr] = useState<string | null>(null);
 
     useEffect(() => {
