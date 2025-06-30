@@ -7,6 +7,7 @@ import ModalTriggerClient from "@/app/ui/modalTrigger";
 
 interface Message {
   id: string;
+  name: string;
   message: string;
   created_at: string;
   sender: string;
@@ -69,7 +70,7 @@ export default function ChatPage() {
          >
             <Image className='rounded-full bg-gray-100 w-[25px] h-[25px]' src='/profile/user.png' alt="profile" width={25} height={25} />
             <div className="w-[40%] bg-white/10 p-2 flex flex-col gap-y-2">
-              <p className="text-xs font-bold">{name}</p>
+              <p className="text-xs font-bold">{msg.name}</p>
               <div className='flex flex-col justify-between gap-y-3'>
                 <p className="text-xs white-space break-words w-full">{msg.message}</p>
                 <p className='text-[6px] self-end'>{msg.created_at}</p>
