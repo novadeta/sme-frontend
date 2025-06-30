@@ -22,14 +22,19 @@ export default function NavLinks() {
     const userId = localStorage.getItem('token'); // Ambil id user yang login
 
     if (!userId) return;
-
-    fetch(`https://3da8-2001-448a-3010-4eb2-71fe-9158-fa59-2da9.ngrok-free.app/api/sales/${userId}`) // Sesuaikan endpoint
-      .then((res) => res.json())
-      .then((data) => {
-        setContacts(data); // Simpan hasil ke state
-        setLoading(false);
-      })
+    fetch(`https://1202-2001-448a-3010-35d1-fe2e-a683-14c-5314.ngrok-free.app/api/sales/${userId}`) // Sesuaikan endpoint
+      .then(res => {
+        console.log(res.text());
+        
+      }
+    )
+      // .then((data) => {
+      //   setContacts(data); // Simpan hasil ke state
+      //   setLoading(false);
+      // })
       .catch((err) => {
+        console.log(err);
+        
         console.error('Error fetching contacts:', err);
         setLoading(false);
       });

@@ -31,7 +31,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // Fungsi login: kirim email/password ke API, simpan token, redirect
   const login = async (email: string, password: string) => {
-    const res = await fetch('https://3da8-2001-448a-3010-4eb2-71fe-9158-fa59-2da9.ngrok-free.app/api/auth/login', {
+    const res = await fetch('https://1202-2001-448a-3010-35d1-fe2e-a683-14c-5314.ngrok-free.app/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -59,7 +59,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // Fungsi register: kirim data, lalu otomatis login jika sukses
   const register = async (name: string, email: string, password: string, phone_number: string, role: string) => {
-    const res = await fetch('https://3da8-2001-448a-3010-4eb2-71fe-9158-fa59-2da9.ngrok-free.app/api/auth/register', {
+    const res = await fetch('https://1202-2001-448a-3010-35d1-fe2e-a683-14c-5314.ngrok-free.app/api/auth/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password, phone_number, role }),

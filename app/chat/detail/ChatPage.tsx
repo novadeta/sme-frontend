@@ -23,7 +23,7 @@ export default function ChatPage() {
     const userId = localStorage.getItem('token');
     if (!userId || !salesId) return;
 
-    fetch(`https://3da8-2001-448a-3010-4eb2-71fe-9158-fa59-2da9.ngrok-free.app/api/chats/${userId}/${salesId}`)
+    fetch(`https://1202-2001-448a-3010-35d1-fe2e-a683-14c-5314.ngrok-free.app/api/chats/${userId}/${salesId}`)
       .then(res => res.json())
       .then(data => {
         setMessage(data.data);

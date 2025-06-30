@@ -8,9 +8,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <section className="w-[35%] max-xl:w-[43%] flex flex-col py-5 overflow-y-scroll">
         <div className="flex w-full justify-between mb-3 px-5">
           <div className="text-3xl font-bold">Chat</div>
-          <ModalTriggerClient source="layout">
+          {/* <ModalTriggerClient source="layout">
             Add Contact
-          </ModalTriggerClient>
+          </ModalTriggerClient> */}
         </div>
         <NavLinks/>
         </section>
