@@ -24,7 +24,7 @@ export default function ChatPage() {
     const userId = localStorage.getItem('token');
     if (!userId || !salesId) return;
 
-    fetch(`${process.env.API_BASE_URL}/api/chats/${userId}/${salesId}`, 
+    fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/chats/${userId}/${salesId}`, 
       {
         headers: {
           'Content-Type': 'application/json',
