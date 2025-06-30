@@ -19,7 +19,7 @@ export default function NavLinks() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const userId = localStorage.getItem('token'); // Ambil id user yang login
+    const userId = localStorage.getItem('token'); 
     
     if (!userId) return;
     fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/sales/${userId}`, {
