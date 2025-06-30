@@ -7,7 +7,7 @@ import { useState } from "react";
 import { useAuth } from "../Auth/AuthContext";
 import { toast } from "react-toastify";
 
-export default function page() {
+export default function Page() {
   const { register } = useAuth(); // Ambil fungsi register dari context
   const [name, setName] = useState(''); // State input nama
   const [email, setEmail] = useState(''); // State input email
@@ -23,8 +23,12 @@ export default function page() {
       setError(null);
       await register(name, email, password, phone_number, role); // Panggil register
       toast.success('User registered successfull');
-    } catch (err: any) {
-      toast.error(err.message); // Set error jika gagal
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        toast.error(err.message);
+      } else {
+        toast.error('An unexpected error occurred');
+      }
     }
   };
 

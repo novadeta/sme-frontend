@@ -3,13 +3,12 @@ import clsx from "clsx"
 
 interface labelInput extends React.InputHTMLAttributes<HTMLInputElement> {
   children: React.ReactNode;
-  classLabel: String;
-  classInput: String;
+  classLabel: string;
+  classInput: string;
 
 }
 
-export default function Input({children, type, onChange, value, placeholder, className, classLabel, classInput, ...rest}:labelInput) {
-  const id = useId()
+export default function Input({children, type, onChange, value, placeholder, className, classLabel, classInput}:labelInput) {
   return (
     <>
       <div className={clsx("flex flex-col", className)}>

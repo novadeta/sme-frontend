@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import Image from "next/image";
 import { useState, useEffect } from 'react';
@@ -24,7 +23,7 @@ export default function NavLinks() {
 
     if (!userId) return;
 
-    fetch(`http://127.0.0.1:3000/api/sales/${userId}`) // Sesuaikan endpoint
+    fetch(`https://3da8-2001-448a-3010-4eb2-71fe-9158-fa59-2da9.ngrok-free.app/api/sales/${userId}`) // Sesuaikan endpoint
       .then((res) => res.json())
       .then((data) => {
         setContacts(data); // Simpan hasil ke state

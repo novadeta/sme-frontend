@@ -20,7 +20,7 @@ export default function ContactformContent() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://127.0.0.1:3000/api/sales", {
+      const res = await fetch("https://3da8-2001-448a-3010-4eb2-71fe-9158-fa59-2da9.ngrok-free.app/api/sales", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
