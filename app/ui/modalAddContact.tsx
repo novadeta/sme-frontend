@@ -8,7 +8,6 @@ export default function ContactformContent() {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
 
-  // Ambil id_user dari localStorage saat pertama kali komponen dimount
   useEffect(() => {
     const storedId = localStorage.getItem("token");
     if (storedId) {
