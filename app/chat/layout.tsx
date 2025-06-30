@@ -1,6 +1,5 @@
 
 import NavLinks from "../ui/navlink";
-import ModalTriggerClient from "../ui/modalTrigger";
  
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

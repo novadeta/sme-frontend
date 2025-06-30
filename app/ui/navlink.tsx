@@ -23,15 +23,11 @@ export default function NavLinks() {
 
     if (!userId) return;
     fetch(`https://1202-2001-448a-3010-35d1-fe2e-a683-14c-5314.ngrok-free.app/api/sales/${userId}`) // Sesuaikan endpoint
-      .then(res => {
-        console.log(res.text());
-        
-      }
-    )
-      // .then((data) => {
-      //   setContacts(data); // Simpan hasil ke state
-      //   setLoading(false);
-      // })
+      .then((res) => res.json())
+      .then((data) => {
+        setContacts(data); // Simpan hasil ke state
+        setLoading(false);
+      })
       .catch((err) => {
         console.log(err);
         
