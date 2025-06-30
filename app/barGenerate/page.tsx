@@ -24,7 +24,7 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await fetch('https://1202-2001-448a-3010-35d1-fe2e-a683-14c-5314.ngrok-free.app/api/whatsapp/login', {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/whatsapp/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

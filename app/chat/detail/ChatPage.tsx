@@ -23,11 +23,11 @@ export default function ChatPage() {
     const userId = localStorage.getItem('token');
     if (!userId || !salesId) return;
 
-    fetch(`https://1202-2001-448a-3010-35d1-fe2e-a683-14c-5314.ngrok-free.app/api/chats/${userId}/${salesId}`, 
+    fetch(`${process.env.API_BASE_URL}/api/chats/${userId}/${salesId}`, 
       {
         headers: {
           'Content-Type': 'application/json',
-        'ngrok-skip-browser-warning': "69420"
+          'ngrok-skip-browser-warning': "69420"
           
         }
       }

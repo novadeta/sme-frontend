@@ -22,7 +22,7 @@ export default function NavLinks() {
     const userId = localStorage.getItem('token'); // Ambil id user yang login
     
     if (!userId) return;
-    fetch(`https://1202-2001-448a-3010-35d1-fe2e-a683-14c-5314.ngrok-free.app/api/sales/${userId}`, {
+    fetch(`${process.env.API_BASE_URL}/api/sales/${userId}`, {
       headers: { 
         'Content-Type': 'application/json',
         'ngrok-skip-browser-warning': "69420"
