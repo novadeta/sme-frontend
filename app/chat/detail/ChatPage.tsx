@@ -77,15 +77,6 @@ export default function ChatPage() {
             </div>
           </div>
         ))}
-
-        {/* Contoh Chat Dari Sales */}
-        <div className="flex items-start flex-row-reverse gap-x-2">
-          <Image className='rounded-full bg-gray-100 w-[25px] h-[25px]' src='/profile/user.png' alt="profile" width={25} height={25} />
-          <div className="w-[40%] bg-white/10 p-2 flex flex-col gap-y-2">
-            <p className="text-xs font-bold">Miftahul huda</p>
-            <p className="text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
       </div>
     </main>
   );
