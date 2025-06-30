@@ -13,7 +13,6 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    // Ambil data dari localStorage saat komponen mount
     const user_id = localStorage.getItem('token') || '';
     const session_name = localStorage.getItem('session_name') || '';
     const phone_number = localStorage.getItem('phone_number') || '';
@@ -33,7 +32,7 @@ export default function Home() {
       const data = await res.json();
 
       if (res.status === 200 || res.status === 201) {
-        localStorage.setItem('qr_image', data.qr); // simpan qr base64 di localStorage
+        localStorage.setItem('qr_image', data.qr);
         router.push('/barGenerate/barcode');
         toast.success('koneksi berhasil')
       } else {
