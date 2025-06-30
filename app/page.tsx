@@ -11,7 +11,6 @@ export default function Page() {
     const { login } = useAuth(); // Ambil fungsi login dari context
     const [email, setEmail] = useState(''); // State input email
     const [password, setPassword] = useState(''); // State input password
-    const [error, setError] = useState<string | null>(null); // State error
 
     // Fungsi handle submit form
   const handleSubmit = async (e: React.FormEvent) => {
@@ -19,8 +18,12 @@ export default function Page() {
     try {
       await login(email, password); // Panggil login
       toast.success('Login successful');
-    } catch (err: any) {
-      toast.error(err.message); // Set error jika gagal
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        toast.error(err.message); // Set error jika gagal
+      }else{
+        toast.error('An unexpected error occurred');
+      }
     }
   };
   return(
