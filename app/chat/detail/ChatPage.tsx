@@ -9,6 +9,7 @@ interface Message {
   id: string;
   message: string;
   created_at: string;
+  sender: string;
 }
 
 export default function ChatPage() {
@@ -61,7 +62,11 @@ export default function ChatPage() {
       {/* Chat Messages */}
       <div className="overflow-y-scroll h-full flex flex-col gap-y-5 max-md:gap-y-5 p-2">
         {message.map((msg) => (
-          <div key={msg.id} className="flex items-start justify-start gap-x-2">
+          
+           <div
+           key={msg.id}
+           className={`flex items-start gap-x-2 ${msg.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}
+         >
             <Image className='rounded-full bg-gray-100 w-[25px] h-[25px]' src='/profile/user.png' alt="profile" width={25} height={25} />
             <div className="w-[40%] bg-white/10 p-2 flex flex-col gap-y-2">
               <p className="text-xs font-bold">{name}</p>
