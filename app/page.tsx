@@ -7,7 +7,7 @@ import { useAuth } from "./Auth/AuthContext";
 import { useState } from "react";
 import { toast } from "react-toastify";
 
-export default function page() {
+export default function Page() {
     const { login } = useAuth(); // Ambil fungsi login dari context
     const [email, setEmail] = useState(''); // State input email
     const [password, setPassword] = useState(''); // State input password

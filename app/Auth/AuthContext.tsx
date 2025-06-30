@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation'; // Hook untuk navigasi programatik
 interface AuthContextType {
   token: string | null; // JWT token, null jika belum login
   login: (email: string, password: string) => Promise<void>; // Fungsi login
-  register: (name: string, email: string, password: string, phone_number: string, role: String) => Promise<void>; // Fungsi register
+  register: (name: string, email: string, password: string, phone_number: string, role: string) => Promise<void>; // Fungsi register
   logout: () => void; // Fungsi logout
 }
 
