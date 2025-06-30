@@ -14,13 +14,13 @@ export default function Page() {
   const [password, setPassword] = useState(''); // State input password
   const [phone_number, setPhone_number] = useState(''); // State input phone number
   const [role, setRole] = useState(''); // State input role
-  const [error, setError] = useState<string | null>(null); // State error
+  // const [error, setError] = useState<string | null>(null); // State error
 
   // Handle submit form register
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      setError(null);
+      // setError(null);
       await register(name, email, password, phone_number, role); // Panggil register
       toast.success('User registered successfull');
     } catch (err: unknown) {
